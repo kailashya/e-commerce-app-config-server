@@ -1,1 +1,20 @@
-
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Root_@123
+    url: jdbc:mysql://localhost:3306/ECommerceDB?allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        temp:
+          use_jdbc_metadata_defaults: false;  
+  sql:
+    init:
+      continue-on-error: true
+      mode: always
